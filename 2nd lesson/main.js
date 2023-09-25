@@ -35,8 +35,6 @@ function if_statement(a) {
             return 7
         }
     }
-
-    return state3
 }
 
 /*(a > 10 

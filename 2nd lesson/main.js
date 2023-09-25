@@ -13,7 +13,7 @@ function if_statement(a) {
     }
 
     if(state1>5){
-        state2 = (2*a)+1
+        return(2*a)+1
     }
     else{
         if(a<3){
@@ -25,14 +25,14 @@ function if_statement(a) {
     }
 
     if(state2>4){
-        state3 = 5
+        return 5
     }
     else{
         if(a%2==0){
-            state3 = 6
+            return 6
         }
         else{
-            state3 = 7
+            return 7
         }
     }
 

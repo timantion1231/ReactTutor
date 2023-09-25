@@ -35,8 +35,6 @@ function if_statement(a) {
             return 7
         }
     }
-
-    return state3
 }
 
 /*(a > 10 
@@ -61,4 +59,3 @@ console.log("a: " + a)
 console.log("Tern original: " + if_statement2(a))//true
 console.log("if statement: " + if_statement(a))//check
 
-//console.log((a > 10 ? a : a * 2) > 5 ? (2 * a) + 1 : (a < 3 ? 1 : 2 * (a - 2)) > 4 ? 5 : (a % 2 == 0 ? 6 : 7));

@@ -6,37 +6,37 @@ function if_statement(a) {
     state3 = 0
 
     if (a > 10) {
-        state1 = a
+       a
     }
     else {
-        state1 = a * 2
+        a = a * 2
     }
 
-    if(state1>5){
-        state2 = (2*a)+1
+    if(a>5){
+        a = (2*a)+1
     }
     else{
         if(a<3){
-            state2 = 1
+            a = 1
         }
         else{
-            state2 = 2*(a-2)
+            a = 2*(a-2)
         }
     }
 
-    if(state2>4){
-        state3 = 5
+    if(a>4){
+        a = 5
     }
     else{
         if(a%2==0){
-            state3 = 6
+            a = 6
         }
         else{
-            state3 = 7
+            a = 7
         }
     }
 
-    return state3
+    return a
 }
 
 /*(a > 10 

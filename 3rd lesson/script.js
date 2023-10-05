@@ -1,9 +1,5 @@
 let nums = []
 
-for (let i = 0; i < 10; i++) {
-    nums.push(document.getElementById("btn" + i))
-}
-
 let plusbtn = document.getElementById("btnplus")
 let minusbtn = document.getElementById("btnminus")
 let divbtn = document.getElementById("btndel")
@@ -14,14 +10,27 @@ let erasebtn = document.getElementById("btnerase")
 let inparea = document.getElementById("inputarea")
 let storarea = document.getElementById("story")
 
+for (let i = 0; i < 10; i++) {
+    nums.push(document.getElementById("btn" + i))
+}
+
+function addnum(btn) {
+    let currnum = inparea.value
+    inparea.value = currnum + btn
+}
+
 let val1
 let val2
 let resval
 let operation
 
-inparea.oninput = function(){
+inparea.oninput = function () {
     let reg = /[A-Za-zА-Яа-яЁё]/g
     this.value = this.value.replace(reg, '')
+}
+
+erasebtn.onclick = function(){
+    inparea.value = inparea.value.slice(0,-1)
 }
 
 plusbtn.onclick = function () {

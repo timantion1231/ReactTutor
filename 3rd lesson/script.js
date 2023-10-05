@@ -29,8 +29,8 @@ inparea.oninput = function () {
     this.value = this.value.replace(reg, '')
 }
 
-erasebtn.onclick = function(){
-    inparea.value = inparea.value.slice(0,-1)
+erasebtn.onclick = function () {
+    inparea.value = inparea.value.slice(0, -1)
 }
 
 plusbtn.onclick = function () {

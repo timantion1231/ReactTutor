@@ -56,11 +56,6 @@ divbtn.onclick = function () {
     inparea.value = ""
     operation = "/"
 }
-/*
-document.addEventListener('click', (event)=> { 
-    console.log('emitting click events');
-})
-*/
 
 equalbtn.onclick = function () {
     val2 = Number(inparea.value)
@@ -80,11 +75,15 @@ equalbtn.onclick = function () {
             break
     }
 
-    storarea.append(val1, operation, val2, " = ", resval, "\n")
-    inparea.value = resval
+    addstory()
     val1 = undefined
     val2 = undefined
     resval = undefined
     operation = undefined
+}
+
+function addstory() {
+    storarea.append(val1, " ", operation, " ", val2, " = ", resval, "\n")
+    inparea.value = resval
 }
 

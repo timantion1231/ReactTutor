@@ -9,6 +9,9 @@ let dotbtn = document.getElementById("btndrob")
 let erasebtn = document.getElementById("btnerase")
 let inparea = document.getElementById("inputarea")
 let storarea = document.getElementById("story")
+let clearbtn = document.getElementById("btnclear")
+
+inparea.focus()
 
 for (let i = 0; i < 10; i++) {
     nums.push(document.getElementById("btn" + i))
@@ -17,6 +20,7 @@ for (let i = 0; i < 10; i++) {
 function addnum(btn) {
     let currnum = inparea.value
     inparea.value = currnum + btn
+    inparea.focus()
 }
 
 let val1
@@ -27,34 +31,43 @@ let operation
 inparea.oninput = function () {
     let reg = /[A-Za-zА-Яа-яЁё]/g
     this.value = this.value.replace(reg, '')
-}
 
 erasebtn.onclick = function () {
     inparea.value = inparea.value.slice(0, -1)
+    inparea.focus()
+}
+
+clearbtn.onclick = function(){
+    inparea.value = ""
+    inparea.focus()
 }
 
 plusbtn.onclick = function () {
     val1 = Number(inparea.value)
     inparea.value = ""
     operation = "+"
+    inparea.focus()
 }
 
 minusbtn.onclick = function () {
     val1 = Number(inparea.value)
     inparea.value = ""
     operation = "-"
+    inparea.focus()
 }
 
 umnbtn.onclick = function () {
     val1 = Number(inparea.value)
     inparea.value = ""
     operation = "*"
+    inparea.focus()
 }
 
 divbtn.onclick = function () {
     val1 = Number(inparea.value)
     inparea.value = ""
     operation = "/"
+    inparea.focus()
 }
 
 equalbtn.onclick = function () {
@@ -74,7 +87,8 @@ equalbtn.onclick = function () {
             resval = val1 / val2
             break
     }
-
+    
+    inparea.focus()
     addstory()
     val1 = undefined
     val2 = undefined

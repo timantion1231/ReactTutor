@@ -31,6 +31,7 @@ let operation
 inparea.oninput = function () {
     let reg = /[A-Za-zА-Яа-яЁё]/g
     this.value = this.value.replace(reg, '')
+}
 
 erasebtn.onclick = function () {
     inparea.value = inparea.value.slice(0, -1)
